@@ -8,7 +8,7 @@ public class GUI implements Runnable {
     @Override
     public void run() {
         this.frame = new JFrame("Netflix Statistix");
-        this.frame.setPreferredSize(new Dimension(500, 300));
+        this.frame.setPreferredSize(new Dimension(500, 700));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
@@ -23,16 +23,24 @@ public class GUI implements Runnable {
         container.setLayout(layout);
         container.setBackground(Color.red);
 
-        container.add(createButtons(), BorderLayout.WEST);
+        container.add(createButtons(), BorderLayout.WEST );
         container.add(footer(), BorderLayout.SOUTH);
     }
 
-    private JPanel createButtons(){
-        JPanel panel = new JPanel(new GridLayout(3,1));
-        Dimension d = new Dimension(100,50);
-        panel.add(new JButton("First"));
-        panel.add(new JButton("First"));
-        panel.add(new JButton("First"));
+    private static JPanel createButtons(){
+        JPanel panel = new JPanel(new GridLayout(6,1));
+
+        JButton getData = new JButton("Get the data now!");
+        JButton getFixed = new JButton("Fix it");
+        JButton getShit = new JButton("Just amazing");
+        getData.setPreferredSize(new Dimension(100,0));
+        getFixed.setPreferredSize(new Dimension(100,0));
+        getShit.setPreferredSize(new Dimension(100,0));
+
+
+        panel.add(getData);
+        panel.add(getFixed);
+        panel.add(getShit);
 
         return panel;
     }
