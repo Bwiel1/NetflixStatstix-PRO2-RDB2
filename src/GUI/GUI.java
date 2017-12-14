@@ -14,7 +14,11 @@ public class GUI implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        createComponents(frame.getContentPane());
+        //createComponents(frame.getContentPane());
+        UIManager.put("swing.boldMetal", Boolean.FALSE);
+        frame.add(new Tabs(), BorderLayout.CENTER);
+
+
 
         frame.pack();
         frame.setVisible(true);
