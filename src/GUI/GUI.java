@@ -14,7 +14,9 @@ public class GUI implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        //createComponents(frame.getContentPane());
+        createComponents(frame.getContentPane());
+
+        //Tabbladen toevoegen en metal-look weghalen
         UIManager.put("swing.boldMetal", Boolean.FALSE);
         frame.add(new Tabs(), BorderLayout.CENTER);
 
@@ -23,13 +25,13 @@ public class GUI implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
-/*
+
     private void createComponents(Container container) {
         BorderLayout layout = new BorderLayout();
         container.setLayout(layout);
         container.setBackground(Color.red);
 
-        container.add(createButtons(), BorderLayout.WEST );
+        //container.add(createButtons(), BorderLayout.WEST );
         container.add(footer(), BorderLayout.SOUTH);
     }
 
@@ -50,7 +52,7 @@ public class GUI implements Runnable {
 
         return panel;
     }
-    */
+
 
     private JPanel footer(){
         JPanel panel = new JPanel(new BorderLayout());
