@@ -23,7 +23,7 @@ public class GUI implements Runnable {
         frame.pack();
         frame.setVisible(true);
     }
-
+/*
     private void createComponents(Container container) {
         BorderLayout layout = new BorderLayout();
         container.setLayout(layout);
@@ -50,6 +50,7 @@ public class GUI implements Runnable {
 
         return panel;
     }
+    */
 
     private JPanel footer(){
         JPanel panel = new JPanel(new BorderLayout());
